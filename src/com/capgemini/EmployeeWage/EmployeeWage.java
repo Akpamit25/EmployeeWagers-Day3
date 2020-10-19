@@ -13,26 +13,36 @@ public class EmployeeWage {
 	public void checkEmployee() {
 		String str;
 		int x = (int) (Math.random() * 3);
-		if (x == 0) {
-			System.out.println("Daily Employee Is Absent");
+		switch (x) {
+		case 0:
+			System.out.println("Employee Is Absent");
 			empHour = 0;
 			dailyEmployeeWage(empHour);
-		} else if (x == 1) {
-			System.out.println("Daily Employee Is Present");
+			break;
+
+		case 1:
+			System.out.println("Employee Is Present");
 			empHour = 8;
 			dailyEmployeeWage(empHour);
-		} else if (x == 2) {
-			System.out.println("Part Time Employee");
+			break;
+
+		case 2:
+			System.out.println("Part-Time Employee");
 			empHour = 4;
 			dailyEmployeeWage(empHour);
+			break;
+
+		/*
+		 * case 3: System.out.println("Part Time Employee Absent"); empHour = 0;
+		 * dailyEmployeeWage(empHour); break;
+		 */
 		}
-		// else if (x == 3) { System.out.println("Part Time Employee Absent"); empHour =
-		// 0; dailyEmployeeWage(empHour); }
+
 	}
 
 	public void dailyEmployeeWage(int hour) {
 		int wage = hour * empWage_per_hour;
-		System.out.println("Employee Wage = " + wage);
+		System.out.println("Employee's Daily Wage = " + wage);
 	}
 
 }
