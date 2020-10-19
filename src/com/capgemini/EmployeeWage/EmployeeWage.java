@@ -1,6 +1,8 @@
 package com.capgemini.EmployeeWage;
 
 public class EmployeeWage {
+	static int empWage_per_hour = 20;
+	int empHour = 0;
 
 	public static void main(String[] args) {
 
@@ -10,13 +12,21 @@ public class EmployeeWage {
 
 	public void checkEmployee() {
 		String str;
-		int x = (int) (Math.random()* 2);
+		int x = (int) (Math.random() * 3);
 		if (x == 0) {
-			System.out.println("Employee Is Absent");
+			System.out.println("Daily Employee Is Absent");
+			empHour = 0;
+			dailyEmployeeWage(empHour);
 		} else if (x == 1) {
-			System.out.println("Employee Is Present");
-
+			System.out.println("Daily Employee Is Present");
+			empHour = 8;
+			dailyEmployeeWage(empHour);
 		}
+	}
+
+	public void dailyEmployeeWage(int hour) {
+		int wage = hour * empWage_per_hour;
+		System.out.println("Employee Wage = " + wage);
 	}
 
 }
