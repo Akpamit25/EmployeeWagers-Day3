@@ -21,7 +21,13 @@ public class EmployeeWage {
 			System.out.println("Daily Employee Is Present");
 			empHour = 8;
 			dailyEmployeeWage(empHour);
+		} else if (x == 2) {
+			System.out.println("Part Time Employee");
+			empHour = 4;
+			dailyEmployeeWage(empHour);
 		}
+		// else if (x == 3) { System.out.println("Part Time Employee Absent"); empHour =
+		// 0; dailyEmployeeWage(empHour); }
 	}
 
 	public void dailyEmployeeWage(int hour) {
